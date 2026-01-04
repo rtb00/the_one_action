@@ -3,7 +3,6 @@ import { Lightbulb } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Layout from '../../../components/Layout';
 import GlassCard from '../components/GlassCard';
-import GradientButton from '../components/GradientButton';
 import GlassBackButton from '../components/GlassBackButton';
 import { useOnboardingStore } from '../store/onboardingStore';
 

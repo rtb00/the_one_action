@@ -5,7 +5,6 @@ import { useAppStore } from './lib/store';
 import { initializeDatabase } from './lib/db';
 
 // Old Pages (to be replaced)
-import Onboarding from './pages/Onboarding';
 import MainAction from './pages/MainAction';
 import Plan from './pages/Plan';
 import Progress from './pages/Progress';

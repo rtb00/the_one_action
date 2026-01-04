@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { Calendar, RotateCcw } from 'lucide-react';
 import Layout from '../../../components/Layout';
 import GlassCard from '../components/GlassCard';
-import GradientButton from '../components/GradientButton';
 import { useOnboardingStore } from '../store/onboardingStore';
 
 const actionTexts = {

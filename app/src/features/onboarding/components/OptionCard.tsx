@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface OptionCardProps {
-  icon: React.ComponentType<{ size?: number; className?: string; strokeWidth?: number }>;
   label: string;
   onClick: () => void;
   selected?: boolean;
@@ -9,7 +8,6 @@ interface OptionCardProps {
 }
 
 export default function OptionCard({
-  icon: Icon,
   label,
   onClick,
   selected = false,
