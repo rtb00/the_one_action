@@ -54,7 +54,7 @@ export default function NutritionScreen() {
               {nutritionOptions.map((option) => (
                 <OptionCard
                   key={option.value}
-                  icon={option.icon}
+
                   label={option.label}
                   onClick={() => handleSelect(option.value)}
                 />

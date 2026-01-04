@@ -54,7 +54,7 @@ export default function SleepScreen() {
               {sleepOptions.map((option) => (
                 <OptionCard
                   key={option.value}
-                  icon={option.icon}
+
                   label={option.label}
                   onClick={() => handleSelect(option.value)}
                 />

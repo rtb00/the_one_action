@@ -30,17 +30,14 @@ export default function GenderScreen() {
 
             <div className="space-y-3 pt-2">
               <OptionCard
-                icon={User}
                 label="Männlich"
                 onClick={() => handleSelect('male')}
               />
               <OptionCard
-                icon={User}
                 label="Weiblich"
                 onClick={() => handleSelect('female')}
               />
               <OptionCard
-                icon={Users}
                 label="Divers"
                 onClick={() => handleSelect('other')}
               />
