@@ -21,6 +21,8 @@ export default function ComingSoonScreen() {
               </div>
             </div>
 
+            <div className="h-8"></div>
+
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-gray-900">
                 Bald verfügbar!
@@ -30,7 +32,7 @@ export default function ComingSoonScreen() {
                   Wir arbeiten daran, dir noch mehr individuelle Maßnahmen anzubieten.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  Schau bald wieder vorbei, um weitere personalisierte Gesundheitshebel zu entdecken.
+                  Schau bald wieder vorbei, um weitere personalisierte Maßnahmen zu entdecken.
                 </p>
               </div>
               <div className="pt-4">

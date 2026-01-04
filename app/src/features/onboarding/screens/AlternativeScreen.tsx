@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Check, X } from 'lucide-react';
+import { Check, X, RefreshCw } from 'lucide-react';
 import Layout from '../../../components/Layout';
 import GlassCard from '../components/GlassCard';
 import GlassBackButton from '../components/GlassBackButton';
@@ -20,16 +20,30 @@ export default function AlternativeScreen() {
         <div className="max-w-md w-full space-y-8">
           <GlassCard className="space-y-8">
             <div className="text-center space-y-6">
+              <div className="flex justify-center">
+                <div
+                  className="p-4 rounded-2xl"
+                  style={{
+                    background: 'linear-gradient(135deg, #A78BFA 0%, #60A5FA 100%)',
+                    boxShadow: '0 8px 24px rgba(167, 139, 250, 0.3)',
+                  }}
+                >
+                  <RefreshCw size={32} className="text-white" strokeWidth={1.5} />
+                </div>
+              </div>
+
               <h2 className="text-2xl font-semibold text-gray-900">
                 Möchtest Du eine andere Maßnahme versuchen?
               </h2>
             </div>
 
+            <div className="h-6"></div>
+
             <div className="grid grid-cols-2 gap-5">
               <button
                 onClick={handleSelect}
                 className="
-                  p-8
+                  p-5
                   backdrop-blur-xl
                   rounded-2xl
                   border
@@ -40,7 +54,7 @@ export default function AlternativeScreen() {
                   flex
                   flex-col
                   items-center
-                  gap-3
+                  gap-2
                 "
                 style={{
                   background: 'rgba(255, 255, 255, 0.2)',
@@ -48,14 +62,14 @@ export default function AlternativeScreen() {
                   boxShadow: '0 4px 16px rgba(167, 139, 250, 0.08)',
                 }}
               >
-                <Check size={32} className="text-lavender-500" strokeWidth={1.5} />
+                <Check size={28} className="text-lavender-500" strokeWidth={1.5} />
                 <span className="font-semibold text-gray-900">Ja</span>
               </button>
 
               <button
                 onClick={handleSelect}
                 className="
-                  p-8
+                  p-5
                   backdrop-blur-xl
                   rounded-2xl
                   border
@@ -66,7 +80,7 @@ export default function AlternativeScreen() {
                   flex
                   flex-col
                   items-center
-                  gap-3
+                  gap-2
                 "
                 style={{
                   background: 'rgba(255, 255, 255, 0.2)',
@@ -74,7 +88,7 @@ export default function AlternativeScreen() {
                   boxShadow: '0 4px 16px rgba(167, 139, 250, 0.08)',
                 }}
               >
-                <X size={32} className="text-lavender-500" strokeWidth={1.5} />
+                <X size={28} className="text-lavender-500" strokeWidth={1.5} />
                 <span className="font-semibold text-gray-900">Nein</span>
               </button>
             </div>
