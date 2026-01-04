@@ -19,11 +19,11 @@ export default function FloatingBubbles({ onSelect }: FloatingBubblesProps) {
 
         // Alternating alignment: even indices left, odd indices right
         const isLeft = index % 2 === 0;
-        
+
         // Individual spacing for each bubble
         const spacings = ['mb-2', 'mb-4', 'mb-4', 'mb-0'];
         const spacing = spacings[index];
-        
+
         // Phase delays for staggered animation
         const delays = ['0s', '1.5s', '3s', '4.5s'];
         const delay = delays[index];
