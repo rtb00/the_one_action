@@ -41,7 +41,7 @@ export default function AnimatedCircle({ healthLever }: AnimatedCircleProps) {
               <path id="circlePath" d="M 130,30 A 100,100 0 0,1 230,130" fill="none" />
             </defs>
             <text>
-              <textPath href="#circlePath" startOffset="0%"  className="fill-white text-[11px] font-light tracking-[2px] uppercase opacity-60">
+              <textPath href="#circlePath" startOffset="0%" className="fill-white text-[11px] font-light tracking-[2px] uppercase opacity-60">
                 The One Action
               </textPath>
             </text>
@@ -59,23 +59,12 @@ export default function AnimatedCircle({ healthLever }: AnimatedCircleProps) {
             boxShadow: '0 8px 32px 0 rgba(138, 135, 255, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 1px 0 rgba(138, 135, 255, 0.3)',
           }}
         >
-          {/* Color Waves */}
-          <div className="color-wave-1" />
-          <div className="color-wave-2" />
-          <div className="color-wave-3" />
-
           {/* Inner Light */}
           <div className="inner-light" />
 
           {/* Circle Text */}
           <div className="relative z-10 text-center text-white p-8 flex flex-col items-center justify-center h-full">
-            <div className="text-[10px] font-normal opacity-75 uppercase tracking-[3px] mb-3">
-              Dein größter
-            </div>
-            <div className="text-[10px] font-normal opacity-75 uppercase tracking-[3px] mb-3">
-              Gesundheitshebel ist
-            </div>
-            <div className="text-[28px] font-light leading-tight text-shadow">
+            <div className="text-[32px] font-normal leading-tight text-shadow">
               {leverLabels[healthLever]}
             </div>
           </div>
@@ -99,7 +88,7 @@ export default function AnimatedCircle({ healthLever }: AnimatedCircleProps) {
             0 0 50px 15px rgba(138, 135, 255, 0.8),
             0 0 70px 20px rgba(138, 135, 255, 0.6),
             0 0 100px 25px rgba(110, 179, 255, 0.5);
-          animation: orbit 8s linear infinite, starPulse 2s ease-in-out infinite;
+          animation: orbit 8.4s linear infinite, starPulse 2s ease-in-out infinite;
           top: calc(50% - 6px);
           left: calc(50% - 6px);
           transform-origin: 6px 6px;
