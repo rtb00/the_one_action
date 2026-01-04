@@ -37,18 +37,18 @@ export default function AlcoholScreen() {
                   <Wine size={28} className="text-white" strokeWidth={1.5} />
                 </div>
               </div>
-              <h2 className="text-3xl font-semibold text-gray-900 leading-tight">
+              <h2 className="text-2xl font-semibold text-gray-900 leading-tight">
                 Denkst du manchmal, dass Du weniger Alkohol trinken solltest?
               </h2>
             </div>
 
-            <div className="h-4"></div>
+            <div className="h-6"></div>
 
             <div className="grid grid-cols-2 gap-5">
               <button
                 onClick={() => handleSelect(true)}
                 className="
-                  p-8
+                  p-5
                   backdrop-blur-xl
                   rounded-2xl
                   border
@@ -59,7 +59,7 @@ export default function AlcoholScreen() {
                   flex
                   flex-col
                   items-center
-                  gap-3
+                  gap-2
                 "
                 style={{
                   background: 'rgba(255, 255, 255, 0.2)',
@@ -67,14 +67,14 @@ export default function AlcoholScreen() {
                   boxShadow: '0 4px 16px rgba(167, 139, 250, 0.08)',
                 }}
               >
-                <Check size={32} className="text-lavender-500" strokeWidth={1.5} />
+                <Check size={28} className="text-lavender-500" strokeWidth={1.5} />
                 <span className="font-semibold text-gray-900">Ja</span>
               </button>
 
               <button
                 onClick={() => handleSelect(false)}
                 className="
-                  p-8
+                  p-5
                   backdrop-blur-xl
                   rounded-2xl
                   border
@@ -85,7 +85,7 @@ export default function AlcoholScreen() {
                   flex
                   flex-col
                   items-center
-                  gap-3
+                  gap-2
                 "
                 style={{
                   background: 'rgba(255, 255, 255, 0.2)',
@@ -93,7 +93,7 @@ export default function AlcoholScreen() {
                   boxShadow: '0 4px 16px rgba(167, 139, 250, 0.08)',
                 }}
               >
-                <X size={32} className="text-lavender-500" strokeWidth={1.5} />
+                <X size={28} className="text-lavender-500" strokeWidth={1.5} />
                 <span className="font-semibold text-gray-900">Nein</span>
               </button>
             </div>

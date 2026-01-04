@@ -28,7 +28,19 @@ export default function SummaryScreen() {
     <Layout>
       <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
         <div className="max-w-md w-full space-y-8">
-          <div className="text-center">
+          <div className="text-center space-y-6">
+            <div className="flex justify-center">
+              <div
+                className="p-4 rounded-2xl"
+                style={{
+                  background: 'linear-gradient(135deg, #A78BFA 0%, #60A5FA 100%)',
+                  boxShadow: '0 8px 24px rgba(167, 139, 250, 0.3)',
+                }}
+              >
+                <Calendar size={32} className="text-white" strokeWidth={1.5} />
+              </div>
+            </div>
+
             <h1 className="text-[40px] font-bold tracking-tight leading-[1.1] bg-gradient-to-r from-lavender-400 via-periwinkle-400 to-lavender-400 bg-clip-text text-transparent">
               TheOneAction
             </h1>
@@ -36,18 +48,6 @@ export default function SummaryScreen() {
 
           <GlassCard className="space-y-8">
             <div className="text-center space-y-6">
-              <div className="flex justify-center">
-                <div
-                  className="p-4 rounded-2xl"
-                  style={{
-                    background: 'linear-gradient(135deg, #A78BFA 0%, #60A5FA 100%)',
-                    boxShadow: '0 8px 24px rgba(167, 139, 250, 0.3)',
-                  }}
-                >
-                  <Calendar size={32} className="text-white" strokeWidth={1.5} />
-                </div>
-              </div>
-
               <h2 className="text-2xl font-semibold text-gray-900">
                 Deine OneAction für die nächsten 14 Tage
               </h2>
@@ -59,41 +59,20 @@ export default function SummaryScreen() {
                   border: '1px solid rgba(167, 139, 250, 0.2)',
                 }}
               >
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-900 leading-relaxed font-bold">
                   {actionTexts[healthLever]}
                 </p>
               </div>
             </div>
-
-            <button
-              onClick={handleRetake}
-              className="
-                w-full
-                px-6
-                py-3
-                rounded-xl
-                font-medium
-                text-gray-600
-                transition-all
-                duration-300
-                hover:scale-[1.01]
-                active:scale-95
-                flex
-                items-center
-                justify-center
-                gap-2
-              "
-              style={{
-                background: 'rgba(255, 255, 255, 0.25)',
-                backdropFilter: 'blur(12px)',
-                border: '1px solid rgba(167, 139, 250, 0.2)',
-                boxShadow: '0 4px 16px rgba(167, 139, 250, 0.1)',
-              }}
-            >
-              <RotateCcw size={18} strokeWidth={2} />
-              <span>Assessment wiederholen</span>
-            </button>
           </GlassCard>
+
+          <button
+            onClick={handleRetake}
+            className="w-full text-center text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200 flex items-center justify-center gap-2 py-2"
+          >
+            <RotateCcw size={14} strokeWidth={2} />
+            <span>Assessment wiederholen</span>
+          </button>
         </div>
       </div>
     </Layout>

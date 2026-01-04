@@ -100,10 +100,10 @@ export default function LoadingScreen() {
           <div
             className="relative z-10 max-w-md mx-6 p-8 rounded-3xl"
             style={{
-              background: 'rgba(0, 0, 0, 0.12)',
+              background: 'rgba(255, 255, 255, 0.25)',
               backdropFilter: 'blur(6px) saturate(180%)',
-              border: '1px solid rgba(255, 255, 255, 0.25)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(255, 255, 255, 0.3)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
             }}
           >
             <div className="flex justify-center mb-6">
@@ -117,17 +117,17 @@ export default function LoadingScreen() {
                 <Sparkles size={28} className="text-white" strokeWidth={1.5} />
               </div>
             </div>
-            <h2 className="text-white text-2xl md:text-3xl font-bold text-center">
+            <h2 className="text-gray-900 text-2xl md:text-3xl font-bold text-center">
               Analysiere deine Daten...
             </h2>
-            <p className="text-white/90 text-sm md:text-base max-w-xl mt-4 text-center">
+            <p className="text-gray-700 text-sm md:text-base max-w-xl mt-4 text-center">
               Wir ermitteln deinen größten Gesundheitshebel
             </p>
             <div className="w-full mt-8">
               <div
                 className="relative h-3 rounded-full overflow-hidden"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.25)',
+                  background: 'rgba(156, 163, 175, 0.3)',
                 }}
               >
                 <div

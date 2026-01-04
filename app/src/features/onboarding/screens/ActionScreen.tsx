@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Check, X } from 'lucide-react';
+import { Check, X, Calendar } from 'lucide-react';
 import Layout from '../../../components/Layout';
 import GlassCard from '../components/GlassCard';
 import GlassBackButton from '../components/GlassBackButton';
@@ -35,29 +35,50 @@ export default function ActionScreen() {
 
       <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
         <div className="max-w-md w-full space-y-8">
-          <div className="text-center">
+          <div className="text-center space-y-6">
+            <div className="flex justify-center">
+              <div
+                className="p-4 rounded-2xl"
+                style={{
+                  background: 'linear-gradient(135deg, #A78BFA 0%, #60A5FA 100%)',
+                  boxShadow: '0 8px 24px rgba(167, 139, 250, 0.3)',
+                }}
+              >
+                <Calendar size={32} className="text-white" strokeWidth={1.5} />
+              </div>
+            </div>
+
             <h1 className="text-[40px] font-bold tracking-tight leading-[1.1] bg-gradient-to-r from-lavender-400 via-periwinkle-400 to-lavender-400 bg-clip-text text-transparent">
               TheOneAction
             </h1>
           </div>
 
-          <GlassCard className="space-y-8">
-            <div className="text-center space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+          <div className="text-center">
+            <div
+              className="p-6 rounded-2xl"
+              style={{
+                background: 'rgba(167, 139, 250, 0.1)',
+                border: '1px solid rgba(167, 139, 250, 0.2)',
+              }}
+            >
+              <p className="text-gray-900 leading-relaxed whitespace-pre-line font-bold">
                 {actionTexts[healthLever]}
               </p>
             </div>
+          </div>
 
-            <div className="space-y-6">
-              <p className="text-center text-gray-600 font-medium text-base">
-                Ist das für Dich umsetzbar?
-              </p>
+          <GlassCard className="space-y-6">
+            <p className="text-center text-gray-600 font-medium text-base">
+              Ist das für Dich umsetzbar?
+            </p>
 
-              <div className="grid grid-cols-2 gap-5">
-                <button
-                  onClick={() => handleSelect(true)}
-                  className="
-                    p-8
+            <div className="h-4"></div>
+
+            <div className="grid grid-cols-2 gap-5">
+              <button
+                onClick={() => handleSelect(true)}
+                className="
+                    p-5
                     backdrop-blur-xl
                     rounded-2xl
                     border
@@ -68,22 +89,22 @@ export default function ActionScreen() {
                     flex
                     flex-col
                     items-center
-                    gap-3
+                    gap-2
                   "
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.2)',
-                    borderColor: 'rgba(167, 139, 250, 0.15)',
-                    boxShadow: '0 4px 16px rgba(167, 139, 250, 0.08)',
-                  }}
-                >
-                  <Check size={32} className="text-lavender-500" strokeWidth={1.5} />
-                  <span className="font-semibold text-gray-900">Ja</span>
-                </button>
+                style={{
+                  background: 'rgba(255, 255, 255, 0.2)',
+                  borderColor: 'rgba(167, 139, 250, 0.15)',
+                  boxShadow: '0 4px 16px rgba(167, 139, 250, 0.08)',
+                }}
+              >
+                <Check size={28} className="text-lavender-500" strokeWidth={1.5} />
+                <span className="font-semibold text-gray-900">Ja</span>
+              </button>
 
-                <button
-                  onClick={() => handleSelect(false)}
-                  className="
-                    p-8
+              <button
+                onClick={() => handleSelect(false)}
+                className="
+                    p-5
                     backdrop-blur-xl
                     rounded-2xl
                     border
@@ -94,18 +115,17 @@ export default function ActionScreen() {
                     flex
                     flex-col
                     items-center
-                    gap-3
+                    gap-2
                   "
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.2)',
-                    borderColor: 'rgba(167, 139, 250, 0.15)',
-                    boxShadow: '0 4px 16px rgba(167, 139, 250, 0.08)',
-                  }}
-                >
-                  <X size={32} className="text-lavender-500" strokeWidth={1.5} />
-                  <span className="font-semibold text-gray-900">Nein</span>
-                </button>
-              </div>
+                style={{
+                  background: 'rgba(255, 255, 255, 0.2)',
+                  borderColor: 'rgba(167, 139, 250, 0.15)',
+                  boxShadow: '0 4px 16px rgba(167, 139, 250, 0.08)',
+                }}
+              >
+                <X size={28} className="text-lavender-500" strokeWidth={1.5} />
+                <span className="font-semibold text-gray-900">Nein</span>
+              </button>
             </div>
           </GlassCard>
         </div>
