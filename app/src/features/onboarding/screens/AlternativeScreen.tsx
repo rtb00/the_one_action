@@ -16,10 +16,10 @@ export default function AlternativeScreen() {
     <Layout>
       <GlassBackButton />
 
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
-        <div className="max-w-md w-full space-y-12">
-          <GlassCard className="space-y-10">
-            <div className="text-center space-y-6 pt-2">
+      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
+        <div className="max-w-md w-full space-y-8">
+          <GlassCard className="space-y-8">
+            <div className="text-center space-y-6">
               <h2 className="text-2xl font-semibold text-gray-900">
                 Möchtest Du eine andere Maßnahme versuchen?
               </h2>

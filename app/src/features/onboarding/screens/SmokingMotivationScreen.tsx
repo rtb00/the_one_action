@@ -24,9 +24,9 @@ export default function SmokingMotivationScreen() {
     <Layout>
       <GlassBackButton />
 
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
-        <div className="max-w-md w-full space-y-12">
-          <GlassCard className="space-y-10">
+      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
+        <div className="max-w-md w-full space-y-8">
+          <GlassCard className="space-y-8">
             <div className="text-center space-y-4">
               <p className="text-sm text-gray-500 font-medium">Auf einer Skala von 0 bis 10:</p>
               <h2 className="text-3xl font-semibold text-gray-900">
@@ -34,9 +34,9 @@ export default function SmokingMotivationScreen() {
               </h2>
             </div>
 
-            <div className="space-y-8 pt-2">
+            <div className="space-y-6">
               {/* Slider */}
-              <div className="space-y-5">
+              <div className="space-y-6">
                 <div
                   className="text-center text-6xl font-bold bg-gradient-to-r from-lavender-400 to-periwinkle-400 bg-clip-text text-transparent"
                 >

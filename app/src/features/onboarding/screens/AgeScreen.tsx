@@ -38,14 +38,14 @@ export default function AgeScreen() {
       <GlassBackButton />
       <Toast message={toastMessage} isVisible={showToast} onClose={() => setShowToast(false)} />
 
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
-        <div className="max-w-md w-full space-y-12">
+      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
+        <div className="max-w-md w-full space-y-8">
           {/* Progress indicator */}
           <div className="text-center">
-            <p className="text-sm text-gray-500 font-medium">Zuerst ein paar Fragen zu Dir</p>
+            <p className="text-sm text-white/70 font-medium tracking-wide">Zuerst ein paar Fragen zu Dir</p>
           </div>
 
-          <GlassCard className="space-y-10">
+          <GlassCard className="space-y-8">
             <div className="text-center space-y-4">
               <h2 className="text-3xl font-semibold text-gray-900">
                 Wie alt bist du?
@@ -55,7 +55,7 @@ export default function AgeScreen() {
               </p>
             </div>
 
-            <div className="space-y-8 pt-2">
+            <div className="space-y-6">
               {/* Age Input */}
               <input
                 type="number"

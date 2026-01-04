@@ -51,7 +51,7 @@ export default function LoadingScreen() {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
+      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
         <div className="max-w-md w-full space-y-8">
           <GlassCard className="space-y-8">
             <div className="text-center space-y-6">

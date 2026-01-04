@@ -26,17 +26,17 @@ export default function SummaryScreen() {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
-        <div className="max-w-md w-full space-y-12">
+      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
+        <div className="max-w-md w-full space-y-8">
           <div className="text-center">
             <h1 className="text-[40px] font-bold tracking-tight leading-[1.1] bg-gradient-to-r from-lavender-400 via-periwinkle-400 to-lavender-400 bg-clip-text text-transparent">
               TheOneAction
             </h1>
           </div>
 
-          <GlassCard className="space-y-10">
+          <GlassCard className="space-y-8">
             <div className="text-center space-y-6">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center">
                 <div
                   className="p-4 rounded-2xl"
                   style={{

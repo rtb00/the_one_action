@@ -12,11 +12,11 @@ export default function SmokingInfoScreen() {
     <Layout>
       <GlassBackButton />
 
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
-        <div className="max-w-md w-full space-y-12">
-          <GlassCard className="space-y-10">
+      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
+        <div className="max-w-md w-full space-y-8">
+          <GlassCard className="space-y-8">
             <div className="text-center space-y-6">
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center">
                 <div
                   className="p-3 rounded-2xl"
                   style={{
@@ -34,19 +34,21 @@ export default function SmokingInfoScreen() {
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                   Wenn Du aufhören möchtest, wende Dich an das <strong>Bundesinstitut für öffentliche
-                  Gesundheit</strong> oder deinen <strong>Hausarzt</strong>.
+                    Gesundheit</strong> oder deinen <strong>Hausarzt</strong>.
                 </p>
               </div>
             </div>
 
-            <div className="space-y-4 mt-4">
+            <div className="h-6"></div>
+
+            <div className="space-y-4">
               <GradientButton
-                onClick={() => navigate('/onboarding/analyzing')}
+                onClick={() => navigate('/onboarding/alcohol')}
                 className="w-full"
               >
                 Weiter
               </GradientButton>
-              
+
               <p className="text-gray-500 text-sm text-center leading-relaxed">
                 Klicke weiter, um mit Deinem nächstgrößeren Gesundheitshebel fortzufahren.
               </p>

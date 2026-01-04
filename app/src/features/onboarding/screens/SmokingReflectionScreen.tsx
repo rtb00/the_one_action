@@ -21,7 +21,7 @@ export default function SmokingReflectionScreen() {
 
     const interval = setInterval(() => {
       const elapsed = Date.now() - startTime;
-      
+
       let currentProgress;
       if (elapsed < firstQuarterTime) {
         // First quarter: 100% to 75% over 3 seconds
@@ -36,7 +36,7 @@ export default function SmokingReflectionScreen() {
         clearInterval(interval);
         setIsEnabled(true);
       }
-      
+
       setProgress(Math.max(0, currentProgress));
     }, 16); // ~60fps
 
@@ -51,11 +51,11 @@ export default function SmokingReflectionScreen() {
     <Layout>
       <GlassBackButton />
 
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
-        <div className="max-w-md w-full space-y-12">
-          <GlassCard className="space-y-10">
+      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
+        <div className="max-w-md w-full space-y-8">
+          <GlassCard className="space-y-8">
             <div className="text-center space-y-6">
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center">
                 <div
                   className="p-3 rounded-2xl"
                   style={{

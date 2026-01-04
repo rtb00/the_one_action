@@ -22,11 +22,11 @@ export default function AlcoholScreen() {
     <Layout>
       <GlassBackButton />
 
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
-        <div className="max-w-md w-full space-y-12">
-          <GlassCard className="space-y-10">
-            <div className="text-center space-y-4">
-              <div className="flex justify-center mb-4">
+      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
+        <div className="max-w-md w-full space-y-8">
+          <GlassCard className="space-y-8">
+            <div className="text-center space-y-6">
+              <div className="flex justify-center">
                 <div
                   className="p-3 rounded-2xl"
                   style={{
@@ -37,12 +37,14 @@ export default function AlcoholScreen() {
                   <Wine size={28} className="text-white" strokeWidth={1.5} />
                 </div>
               </div>
-              <h2 className="text-2xl font-semibold text-gray-900 leading-tight">
+              <h2 className="text-3xl font-semibold text-gray-900 leading-tight">
                 Denkst du manchmal, dass Du weniger Alkohol trinken solltest?
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 gap-5 pt-2">
+            <div className="h-4"></div>
+
+            <div className="grid grid-cols-2 gap-5">
               <button
                 onClick={() => handleSelect(true)}
                 className="

@@ -31,22 +31,21 @@ export default function TransitionScreen() {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
+      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
         <div className="max-w-md w-full space-y-8">
-          <GlassCard className="text-center space-y-6">
-            <div className="flex justify-center mb-4">
-              <div
-                className="p-3 rounded-2xl"
-                style={{
-                  background: 'linear-gradient(135deg, #A78BFA 0%, #60A5FA 100%)',
-                  boxShadow: '0 8px 24px rgba(167, 139, 250, 0.3)',
-                }}
-              >
-                <ClipboardCheck size={28} className="text-white" strokeWidth={1.5} />
+          <GlassCard className="space-y-8">
+            <div className="text-center space-y-6">
+              <div className="flex justify-center">
+                <div
+                  className="p-3 rounded-2xl"
+                  style={{
+                    background: 'linear-gradient(135deg, #A78BFA 0%, #60A5FA 100%)',
+                    boxShadow: '0 8px 24px rgba(167, 139, 250, 0.3)',
+                  }}
+                >
+                  <ClipboardCheck size={28} className="text-white" strokeWidth={1.5} />
+                </div>
               </div>
-            </div>
-
-            <div className="space-y-3">
               <h2 className="text-3xl font-semibold text-gray-900">
                 Fast geschafft!
               </h2>
@@ -55,7 +54,9 @@ export default function TransitionScreen() {
               </p>
             </div>
 
-            <div className="w-full h-2 rounded-full overflow-hidden mt-8" style={{ background: 'rgba(167, 139, 250, 0.15)' }}>
+            <div className="h-4"></div>
+
+            <div className="w-full h-2 rounded-full overflow-hidden" style={{ background: 'rgba(167, 139, 250, 0.15)' }}>
               <div
                 className="h-full transition-all duration-300 ease-out"
                 style={{

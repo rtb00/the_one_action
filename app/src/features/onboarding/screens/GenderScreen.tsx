@@ -18,16 +18,21 @@ export default function GenderScreen() {
     <Layout>
       <GlassBackButton />
 
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
-        <div className="max-w-md w-full space-y-12">
-          <GlassCard className="space-y-10">
-            <div className="text-center space-y-4">
+      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
+        <div className="max-w-md w-full space-y-8">
+          {/* Progress indicator */}
+          <div className="text-center">
+            <p className="text-sm text-white/70 font-medium tracking-wide">Zuerst ein paar Fragen zu Dir</p>
+          </div>
+
+          <GlassCard className="space-y-8">
+            <div className="text-center">
               <h2 className="text-3xl font-semibold text-gray-900">
                 Wie identifizierst du dich?
               </h2>
             </div>
 
-            <div className="space-y-3 pt-2">
+            <div className="space-y-4">
               <OptionCard
                 label="Männlich"
                 onClick={() => handleSelect('male')}

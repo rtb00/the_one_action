@@ -18,7 +18,7 @@ export default function ResultCircleScreen() {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
+      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
         <div className="space-y-8">
           <div className="text-center">
             <p className="text-sm text-gray-600 font-medium mb-2">
