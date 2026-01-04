@@ -1,0 +1,141 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Lavender spectrum */
+  --color-lavender-50: #F5F3FF;
+  --color-lavender-100: #EDE9FE;
+  --color-lavender-200: #DDD6FE;
+  --color-lavender-300: #C4B5FD;
+  --color-lavender-400: #A78BFA;
+  --color-lavender-500: #8B5CF6;
+  --color-lavender-600: #7C3AED;
+  --color-lavender-700: #6D28D9;
+  --color-lavender-800: #5B21B6;
+  --color-lavender-900: #4C1D95;
+
+  /* Periwinkle spectrum */
+  --color-periwinkle-50: #EFF6FF;
+  --color-periwinkle-100: #DBEAFE;
+  --color-periwinkle-200: #BFDBFE;
+  --color-periwinkle-300: #93C5FD;
+  --color-periwinkle-400: #60A5FA;
+  --color-periwinkle-500: #3B82F6;
+  --color-periwinkle-600: #2563EB;
+  --color-periwinkle-700: #1D4ED8;
+  --color-periwinkle-800: #1E40AF;
+  --color-periwinkle-900: #1E3A8A;
+
+  /* Background colors */
+  --color-background-base: #FFFFFF;
+  --color-background-subtle: #FAFBFC;
+  --color-background-gradient-start: #F8F7FF;
+  --color-background-gradient-end: #F7FBFF;
+
+  /* Primary colors */
+  --color-primary-purple: #8B5CF6;
+  --color-primary-blue: #3B82F6;
+
+  /* Accent colors */
+  --color-accent-purple-light: #DDD6FE;
+  --color-accent-blue-light: #DBEAFE;
+
+  /* Glass colors */
+  --color-glass-bg: rgba(255, 255, 255, 0.75);
+  --color-glass-bg-subtle: rgba(248, 247, 255, 0.8);
+  --color-glass-border: rgba(139, 92, 246, 0.12);
+
+  /* Backdrop blur */
+  --blur-glass: 20px;
+  --blur-xs: 2px;
+
+  /* Box shadows */
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.06);
+  --shadow-glass-lg: 0 20px 60px rgba(139, 92, 246, 0.08);
+  --shadow-lavender: 0 8px 32px rgba(167, 139, 250, 0.15);
+  --shadow-periwinkle: 0 8px 32px rgba(147, 197, 253, 0.15);
+
+  /* Font family */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Letter spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-tighter: -0.01em;
+
+  /* Animations */
+  --animate-breathe-subtle: breatheSubtle 12s ease-in-out infinite;
+  --animate-first: moveVertical 30s ease infinite;
+  --animate-second: moveInCircle 20s reverse infinite;
+  --animate-third: moveInCircle 40s linear infinite;
+  --animate-fourth: moveHorizontal 40s ease infinite;
+  --animate-fifth: moveInCircle 20s ease infinite;
+  --animate-gradient-flow: gradientFlow 25s ease infinite;
+  --animate-shine: shine 2s infinite;
+}
+
+@keyframes breatheSubtle {
+  0%, 100% {
+    opacity: 0.05;
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    opacity: 0.08;
+    transform: scale(1.02) translateY(-5px);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
