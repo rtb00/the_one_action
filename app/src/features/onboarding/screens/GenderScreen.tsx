@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import { User, Users } from 'lucide-react';
 import Layout from '../../../components/Layout';
 import GlassCard from '../components/GlassCard';
 import GlassBackButton from '../components/GlassBackButton';
