@@ -1,10 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/the_one_action/',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   plugins: [
     react(),
     VitePWA({
@@ -62,6 +67,6 @@ export default defineConfig({
   ],
   server: {
     host: true, // Allow access from mobile devices on local network
-    port: 5000,
+    port: 5001,
   },
 })

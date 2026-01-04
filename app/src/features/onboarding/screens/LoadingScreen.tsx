@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Loader2 } from 'lucide-react';
 import Layout from '../../../components/Layout';
-import GlassCard from '../components/GlassCard';
 import { useOnboardingStore } from '../store/onboardingStore';
+import { Vortex } from '../../../components/ui/vortex';
 
 export default function LoadingScreen() {
   const navigate = useNavigate();
@@ -51,57 +50,44 @@ export default function LoadingScreen() {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-16 safe-top safe-bottom">
-        <div className="max-w-md w-full space-y-8">
-          <GlassCard className="space-y-8">
-            <div className="text-center space-y-6">
-              <div className="flex justify-center">
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <div className="w-[calc(100%-2rem)] mx-auto rounded-3xl h-[30rem] overflow-hidden">
+          <Vortex
+            backgroundColor="transparent"
+            className="flex items-center flex-col justify-center px-6 py-4 w-full h-full"
+            rangeY={800}
+            particleCount={500}
+            baseHue={260}
+          >
+            <h2 className="text-white text-2xl md:text-4xl font-bold text-center">
+              Analysiere deine Daten...
+            </h2>
+            <p className="text-white/80 text-sm md:text-lg max-w-xl mt-6 text-center">
+              Wir ermitteln deinen größten Gesundheitshebel
+            </p>
+            <div className="w-full max-w-md mt-8 space-y-2">
+              <div
+                className="relative h-3 rounded-full overflow-hidden"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.2)',
+                }}
+              >
                 <div
-                  className="p-6 rounded-full"
+                  className="absolute inset-y-0 left-0 rounded-full transition-all duration-300 ease-out"
                   style={{
-                    background: 'linear-gradient(135deg, #A78BFA 0%, #60A5FA 100%)',
-                    boxShadow: '0 8px 32px rgba(167, 139, 250, 0.4)',
-                    animation: 'pulse 2s ease-in-out infinite',
+                    width: `${progress}%`,
+                    background: 'linear-gradient(90deg, #A78BFA 0%, #93C5FD 50%, #60A5FA 100%)',
+                    boxShadow: '0 0 12px rgba(167, 139, 250, 0.8)',
                   }}
-                >
-                  <Loader2 size={48} className="text-white animate-spin" strokeWidth={1.5} />
-                </div>
+                />
               </div>
-
-              <div className="space-y-3">
-                <h2 className="text-3xl font-semibold text-gray-900">
-                  Analysiere deine Daten...
-                </h2>
-                <p className="text-gray-600">
-                  Wir ermitteln deinen größten Gesundheitshebel
-                </p>
-              </div>
-
-              {/* Fancy Progress Bar */}
-              <div className="space-y-2">
-                <div
-                  className="relative h-3 rounded-full overflow-hidden"
-                  style={{
-                    background: 'rgba(167, 139, 250, 0.1)',
-                  }}
-                >
-                  <div
-                    className="absolute inset-y-0 left-0 rounded-full transition-all duration-300 ease-out"
-                    style={{
-                      width: `${progress}%`,
-                      background: 'linear-gradient(90deg, #A78BFA 0%, #93C5FD 50%, #60A5FA 100%)',
-                      boxShadow: '0 0 12px rgba(167, 139, 250, 0.5)',
-                    }}
-                  />
-                </div>
-                <div className="text-center">
-                  <span className="text-sm font-semibold bg-gradient-to-r from-lavender-400 to-periwinkle-400 bg-clip-text text-transparent">
-                    {Math.round(progress)}%
-                  </span>
-                </div>
+              <div className="text-center">
+                <span className="text-sm font-semibold text-white">
+                  {Math.round(progress)}%
+                </span>
               </div>
             </div>
-          </GlassCard>
+          </Vortex>
         </div>
       </div>
     </Layout>

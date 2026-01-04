@@ -1,96 +1,17 @@
-# 📱 Mobile Testing Setup - TheOneAction
+# 📱 Mobile Testing - Android
 
-Anleitung zum lokalen Testen der App auf dem Smartphone via ADB Port-Forwarding.
-
----
-
-## 🚀 Quick Start
-
-### 1. Dev Server starten
-
+**Terminal 1 - Server starten:**
 ```bash
 cd app
-npm run dev
+npx vite --port 5001 --host
 ```
 
-✅ Server sollte auf Port **5001** laufen: `http://localhost:5001/the_one_action/`
-
-> **Port belegt?** Falls Port 5000/5001 belegt ist:
-> ```bash
-> lsof -i :5001  # Prozess finden
-> kill <PID>     # Prozess beenden
-> npm run dev    # Neu starten
-> ```
-
----
-
-## 📱 Android Testing (ADB)
-
-### Voraussetzungen
-- **ADB installiert**: `brew install android-platform-tools` (macOS)
-- **USB-Debugging aktiviert** am Handy (Developer Options)
-- **Handy per USB verbunden**
-
-### Setup
-
-**1. ADB Verbindung prüfen:**
-```bash
-adb devices
-```
-Output sollte dein Gerät zeigen:
-```
-List of devices attached
-ABC123XYZ    device
-```
-
-**2. Port-Forwarding einrichten:**
+**Terminal 2 - Port Forwarding:**
 ```bash
 adb reverse tcp:5001 tcp:5001
 ```
 
-**3. App auf dem Handy öffnen:**
-```
-http://localhost:5001/the_one_action/
-```
-
-✅ Die App lädt jetzt vom lokalen Dev Server!
-
----
-
-## 🔄 Workflow
-
-### Normale Entwicklung:
-```bash
-# Terminal 1: Dev Server
-cd app
-npm run dev
-
-# Terminal 2: ADB Setup (einmalig nach Handy-Verbindung)
-adb reverse tcp:5001 tcp:5001
-```
-
-### Bei Änderungen:
-- Hot Reload funktioniert automatisch
-- Änderungen werden sofort auf dem Handy sichtbar
-- Bei Bedarf Seite neu laden
-
-### Port-Forwarding entfernen:
-```bash
-adb reverse --remove tcp:5001
-# oder alle:
-adb reverse --remove-all
-```
-
----
-
-## 🍎 iOS Testing (Alternative)
-
-Da iOS kein ADB hat:
-
-**Option 1: Über lokales Netzwerk**
-```
-http://192.168.10.79:5001/the_one_action/
-```
+**Handy öffnen:** `http://localhost:5001/`
 > IP-Adresse aus Vite-Output kopieren (Network URL)
 
 **Option 2: ngrok (Internet-Tunnel)**
