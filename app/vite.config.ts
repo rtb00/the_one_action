@@ -5,6 +5,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/the_one_action/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -23,8 +24,8 @@ export default defineConfig({
         background_color: '#FFFFFF',
         display: 'standalone',
         orientation: 'portrait',
-        scope: '/',
-        start_url: '/',
+        scope: '/the_one_action/',
+        start_url: '/the_one_action/',
         icons: [
           {
             src: 'pwa-192x192.png',
